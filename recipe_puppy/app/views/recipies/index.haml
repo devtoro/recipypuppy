@@ -1,0 +1,5 @@
+=form_with url: '/recipies', local: false, method: :get, format: :js, id: 'recipies-search' do |f|
+  =f.text_field :term, placeholder: 'Search ingredients or recipies', id: 'term-input', class: 'term'
+  =f.submit 'Search', class: 'submit'
+%ul.recipies
+  =render partial: 'recipies', locals: { recipies: @recipies }

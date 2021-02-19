@@ -1,0 +1,7 @@
+%li.recipe
+  %img{ src: recipe.thumbnail, width: 80, height: 80, alt: 'image' }
+  %span
+    %p
+      =link_to recipe.title, recipe.href, target: '_blank'
+    %p
+      =recipe.ingredients

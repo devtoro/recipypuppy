@@ -1,0 +1,17 @@
+default: &default
+  adapter: <%= ENV['DB_ADAPTER'] || 'postgresql' %>
+  encoding: unicode
+  database: <%= ENV['DATABASE_NAME'] || 'puppy' %>
+  username: <%= ENV['DATABASE_USER'] || 'puppy' %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  port: <%= ENV['DB_PORT'] || '5432' %>
+  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: puppy_test

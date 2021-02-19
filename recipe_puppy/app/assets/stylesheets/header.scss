@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  height: 2.5rem;
+  padding: .5rem 1.5rem;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+header .title {
+  flex-grow: 11;
+
+  a { text-decoration: none; color: #5cad5c; }
+}
+header .title h1 { margin: 0;  }
+header .profile { flex-grow: 1; }
+
+.profile {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: .5rem;
+  width: 4rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+}
